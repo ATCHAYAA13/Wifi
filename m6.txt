@@ -1,0 +1,92 @@
+1. Pillars of Wi-Fi Security
+- Authentication: Verifies identity of user/device
+- Encryption: Protects data confidentiality
+- Integrity: Ensures data is not modified
+
+--------------------------------------------------
+
+2. Authentication vs Encryption
+- Authentication:
+  Confirms who you are (login/password, certificates)
+
+- Encryption:
+  Protects data by converting it into unreadable form
+
+--------------------------------------------------
+
+3. WEP vs WPA vs WPA2 vs WPA3
+
+- WEP:
+  Uses RC4
+  Weak security
+  Static keys
+
+- WPA:
+  Uses TKIP
+  Improved over WEP
+  Temporary fix
+
+- WPA2:
+  Uses AES (CCMP)
+  Strong security
+  Widely used
+
+- WPA3:
+  Uses SAE (strong authentication)
+  Better encryption
+  Protection against brute-force attacks
+
+--------------------------------------------------
+
+4. Why WEP is Insecure
+- Weak encryption (RC4 flaws)
+- Short IV (Initialization Vector)
+- Easy to crack using tools
+- No proper key management
+
+--------------------------------------------------
+
+5. Why WPA2 was Introduced
+- To replace weak WPA (TKIP)
+- Provide strong encryption (AES)
+- Improve overall Wi-Fi security
+
+--------------------------------------------------
+
+6. Role of PMK in 4-Way Handshake
+- PMK (Pairwise Master Key) is the base key
+- Derived from passphrase or authentication server
+- Used to generate PTK (session key)
+
+--------------------------------------------------
+
+7. How 4-Way Handshake Ensures Mutual Authentication
+- Both client and AP prove they have same PMK
+- Exchange nonces (ANonce, SNonce)
+- Generate PTK independently
+- Verify using MIC (Message Integrity Code)
+
+--------------------------------------------------
+
+8. Wrong Passphrase in 4-Way Handshake
+- PMK mismatch occurs
+- PTK cannot be derived correctly
+- MIC validation fails
+- Connection is rejected
+
+--------------------------------------------------
+
+9. Problem Solved by 802.1X
+- Provides centralized authentication
+- Eliminates shared passwords
+- Supports per-user authentication
+
+--------------------------------------------------
+
+10. How 802.1X Enhances Security
+- Uses authentication server (RADIUS)
+- Dynamic key generation
+- Strong authentication (EAP methods)
+- Prevents unauthorized access
+
+--------------------------------------------------

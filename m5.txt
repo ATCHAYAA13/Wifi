@@ -1,0 +1,122 @@
+1. Wi-Fi 6, 6E, 7 vs Wi-Fi 5
+
+Wi-Fi 5 (802.11ac):
+- 5 GHz only
+- MU-MIMO (downlink only)
+- Max ~6.9 Gbps
+
+Wi-Fi 6 (802.11ax):
+- 2.4 + 5 GHz
+- OFDMA (multi-user efficiency)
+- UL + DL MU-MIMO
+- TWT (power saving)
+- Max ~9.6 Gbps
+
+Wi-Fi 6E:
+- Same as Wi-Fi 6 + 6 GHz band
+- More channels, less interference
+
+Wi-Fi 7 (802.11be):
+- 2.4 + 5 + 6 GHz
+- 320 MHz channels
+- 4096-QAM
+- Multi-Link Operation (MLO)
+- Extremely high throughput (~46 Gbps theoretical)
+
+--------------------------------------------------
+
+2. OFDMA in Wi-Fi 6
+- Splits channel into smaller subchannels (RU – Resource Units)
+- Multiple users transmit simultaneously
+- Reduces latency and contention
+- Improves efficiency in dense networks
+
+--------------------------------------------------
+
+3. Target Wake Time (TWT)
+- Schedules when devices wake up to transmit/receive
+- Devices sleep when not scheduled
+
+Benefits:
+- Saves battery (important for IoT)
+- Reduces network congestion
+- Improves efficiency
+
+--------------------------------------------------
+
+4. 6 GHz Band (Wi-Fi 6E)
+- Large amount of new spectrum
+- More non-overlapping channels
+- No legacy device interference
+- Higher speeds and lower latency
+
+--------------------------------------------------
+
+5. Wi-Fi 6 vs Wi-Fi 6E
+
+Range:
+- Wi-Fi 6 → Better (2.4/5 GHz)
+- Wi-Fi 6E → Shorter (6 GHz)
+
+Bandwidth:
+- Wi-Fi 6E → Higher (more spectrum)
+
+Interference:
+- Wi-Fi 6 → Moderate
+- Wi-Fi 6E → Very low
+
+--------------------------------------------------
+
+6. Wi-Fi 7 Innovations
+- 320 MHz channel width
+- 4096-QAM (higher data rate)
+- Multi-Link Operation (MLO)
+- Multi-RU allocation
+- Lower latency and higher reliability
+
+--------------------------------------------------
+
+7. Multi-Link Operation (MLO)
+- Uses multiple frequency bands/links at same time
+- Device can transmit/receive over multiple links
+
+Impact:
+- Higher throughput
+- Lower latency
+- Better reliability (failover between links)
+
+--------------------------------------------------
+
+8. 802.11k and 802.11v
+
+- 802.11k:
+  Provides neighbor reports (AP list)
+  Helps client choose better AP
+
+- 802.11v:
+  Network-assisted roaming
+  AP suggests better AP to client
+
+--------------------------------------------------
+
+9. 802.11r (Fast BSS Transition)
+- Enables fast roaming between APs
+- Pre-authentication and key caching
+
+Benefit:
+- Seamless handoff
+- No call drops (VoIP, video)
+
+--------------------------------------------------
+
+10. 802.11k/v/r Together
+
+- 802.11k → Tells client nearby APs
+- 802.11v → Guides client to best AP
+- 802.11r → Speeds up authentication
+
+Result:
+- Fast, seamless roaming
+- Better user experience in enterprise networks
+
+--------------------------------------------------

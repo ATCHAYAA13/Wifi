@@ -1,0 +1,173 @@
+1. MAC Layer Significance & OSI Position
+- MAC (Media Access Control) is part of Data Link Layer (Layer 2)
+- Handles:
+  - Framing
+  - Addressing (MAC address)
+  - Error detection
+  - Medium access (who transmits when)
+- Critical for reliable wireless communication
+
+--------------------------------------------------
+
+2. 802.11 MAC Header Frame Format
+
+Fields:
+- Frame Control:
+  Type, subtype, flags (To/From DS, retry, etc.)
+
+- Duration:
+  Time the medium is reserved
+
+- Address 1:
+  Receiver address
+
+- Address 2:
+  Transmitter address
+
+- Address 3:
+  BSSID / destination
+
+- Address 4 (optional):
+  Used in WDS/bridging
+
+- Sequence Control:
+  Sequence number + fragment number
+
+- QoS Control (optional):
+  Traffic priority info
+
+- HT Control (optional):
+  High throughput control
+
+--------------------------------------------------
+
+3. MAC Layer Functionalities
+
+Management Plane:
+- Beaconing
+- Authentication
+- Association / Reassociation
+- Scanning
+- Roaming
+
+Control Plane:
+- RTS/CTS
+- ACK / Block ACK
+- Power-save polling
+- Channel access (CSMA/CA)
+
+Data Plane:
+- Frame transmission
+- Fragmentation / aggregation
+- Encryption / decryption
+- Error detection (FCS)
+
+--------------------------------------------------
+
+4. Scanning Process
+
+Types:
+- Passive Scanning:
+  Client listens for beacon frames from APs
+  Slower but less traffic
+
+- Active Scanning:
+  Client sends probe request
+  AP replies with probe response
+  Faster discovery
+
+Steps:
+1. Scan channels
+2. Discover APs
+3. Evaluate signal strength/security
+4. Select best AP
+
+--------------------------------------------------
+
+5. Client Association Process
+1. Scan for APs
+2. Authentication (open/shared)
+3. Association request (client → AP)
+4. Association response (AP → client)
+5. Client gets IP (DHCP)
+6. Ready for data transfer
+
+--------------------------------------------------
+
+6. EAPOL 4-Way Handshake
+
+Steps:
+1. AP → Client: ANonce
+2. Client → AP: SNonce + MIC
+3. AP → Client: GTK + MIC
+4. Client → AP: ACK
+
+Keys:
+- PMK: Master key (from password/auth server)
+- PTK: Pairwise key (used for encryption)
+- GTK: Group key (broadcast/multicast traffic)
+
+Purpose:
+- Secure key exchange
+- Confirm both sides have same PMK
+
+--------------------------------------------------
+
+7. Power Saving in MAC Layer
+
+Mechanisms:
+- Legacy Power Save:
+  Client sleeps, wakes to check beacon (TIM)
+
+- U-APSD (WMM Power Save):
+  AP buffers data, sends on request
+
+- TWT (Target Wake Time - Wi-Fi 6):
+  Scheduled wake/sleep times
+
+Purpose:
+- Reduce battery usage
+- Efficient communication
+
+--------------------------------------------------
+
+8. Medium Access Control Methods
+- CSMA/CA (Carrier Sense Multiple Access with Collision Avoidance):
+  Listen before transmit
+
+- Backoff Algorithm:
+  Random delay to avoid collisions
+
+- RTS/CTS:
+  Reserve channel before transmission
+
+--------------------------------------------------
+
+9. Block ACK Mechanism
+- Acknowledges multiple frames at once
+- Instead of ACK per frame
+
+Advantages:
+- Reduces overhead
+- Improves throughput
+- Efficient for high data rates
+
+--------------------------------------------------
+
+10. Frame Aggregation
+
+- A-MSDU:
+  Multiple MSDUs in one MPDU
+  Less header overhead
+  If error → whole frame retransmitted
+
+- A-MPDU:
+  Multiple MPDUs aggregated
+  Each has its own CRC
+  Better reliability
+
+- A-MSDU in A-MPDU:
+  Combination of both
+  Higher efficiency + better reliability
+
+--------------------------------------------------

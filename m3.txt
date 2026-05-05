@@ -1,0 +1,118 @@
+1. 802.11 PHY Layer Standards
+- 802.11b → 2.4 GHz, DSSS, up to 11 Mbps
+- 802.11a → 5 GHz, OFDM, up to 54 Mbps
+- 802.11g → 2.4 GHz, OFDM, up to 54 Mbps
+- 802.11n → 2.4/5 GHz, MIMO, up to 600 Mbps
+- 802.11ac → 5 GHz, MU-MIMO, up to ~6.9 Gbps
+- 802.11ax → 2.4/5/6 GHz, OFDMA, up to ~9.6 Gbps
+
+--------------------------------------------------
+
+2. DSSS and FHSS
+- DSSS (Direct Sequence Spread Spectrum):
+  Spreads signal using pseudo-random code across wider band
+  More resistant to interference
+
+- FHSS (Frequency Hopping Spread Spectrum):
+  Rapidly switches frequencies in a pattern
+  Reduces interference and eavesdropping
+
+--------------------------------------------------
+
+3. Modulation Schemes
+- BPSK → Low speed, very robust
+- QPSK → Moderate speed, good reliability
+- 16-QAM → Higher speed, moderate robustness
+- 64-QAM → High speed, less robust
+- 256-QAM → Very high speed, sensitive to noise
+
+Higher modulation = higher speed but needs better signal quality
+
+--------------------------------------------------
+
+4. OFDM Significance
+- Splits channel into multiple subcarriers
+- Transmits data in parallel
+- Reduces interference and multipath effects
+- Improves throughput and efficiency
+
+--------------------------------------------------
+
+5. Wi-Fi Frequency Bands
+- 2.4 GHz:
+  Channels 1–14 (mostly 1,6,11 used)
+  More range, more interference
+
+- 5 GHz:
+  Many channels (36–165)
+  Less interference, higher speed
+
+- 6 GHz (Wi-Fi 6E):
+  More channels, very high capacity
+
+--------------------------------------------------
+
+6. Guard Interval (GI)
+- Time gap between symbols to avoid overlap (inter-symbol interference)
+- Normal GI: 800 ns
+- Short GI: 400 ns
+- Short GI increases throughput but needs good signal conditions
+
+--------------------------------------------------
+
+7. 802.11 PHY Frame Structure
+- Preamble: Synchronization
+- Header (PLCP): Rate, length info
+- Payload (PSDU): Actual data
+
+--------------------------------------------------
+
+8. OFDM vs OFDMA
+- OFDM:
+  One user uses entire channel
+
+- OFDMA:
+  Multiple users share subcarriers simultaneously
+  Better efficiency in dense networks
+
+--------------------------------------------------
+
+9. MIMO vs MU-MIMO
+- MIMO:
+  Multiple antennas for one device
+
+- MU-MIMO:
+  Multiple antennas serve multiple devices at same time
+
+--------------------------------------------------
+
+10. PPDU, PLCP, PMD
+- PPDU: Physical layer packet (over-the-air frame)
+- PLCP: Adds header to data from MAC layer
+- PMD: Handles actual signal transmission (radio)
+
+--------------------------------------------------
+
+11. Types of PPDU
+- Legacy PPDU (802.11a/b/g)
+- HT PPDU (802.11n)
+- VHT PPDU (802.11ac)
+- HE PPDU (802.11ax)
+
+Format:
+- Preamble + Header + Data
+
+Each generation adds fields for MIMO, OFDMA, etc.
+
+--------------------------------------------------
+
+12. Data Rate Calculation
+Data Rate = (Bits per symbol) × (Number of subcarriers) × (Coding rate) / Symbol duration
+
+Depends on:
+- Modulation (BPSK, QAM)
+- Channel width (20/40/80 MHz)
+- Number of spatial streams
+- Guard interval
+
+--------------------------------------------------

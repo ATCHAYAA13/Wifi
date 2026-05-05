@@ -1,0 +1,125 @@
+Module 1:
+
+1. OSI Layer for Wi-Fi
+Wi-Fi (IEEE 802.11) works in:
+- Layer 1 (Physical Layer)
+- Layer 2 (Data Link Layer)
+
+--------------------------------------------------
+
+2. Wi-Fi Devices & Properties (Example)
+Device: Laptop / Smartphone
+- Standard: 802.11ac (Wi-Fi 5) / 802.11ax (Wi-Fi 6)
+- Frequency: 2.4 GHz / 5 GHz
+- Channel Width: 20/40/80 MHz
+- Speed: ~433 Mbps – 1200 Mbps
+- Security: WPA2 / WPA3
+- Signal Strength: -30 dBm to -70 dBm
+
+Wi-Fi Generations:
+- 802.11n = Wi-Fi 4
+- 802.11ac = Wi-Fi 5
+- 802.11ax = Wi-Fi 6
+
+--------------------------------------------------
+
+3. BSS and ESS
+- BSS (Basic Service Set): One Access Point + connected devices
+- ESS (Extended Service Set): Multiple APs connected forming one network
+
+--------------------------------------------------
+
+4. Functions of Wi-Fi Access Point
+- Connects wireless devices to wired network
+- Provides SSID (network name)
+- Handles authentication (WPA/WPA2/WPA3)
+- Manages traffic (QoS)
+- Supports roaming
+- Assigns IP (via DHCP in some cases)
+
+--------------------------------------------------
+
+5. Bridge Mode vs Repeater Mode
+- Bridge Mode:
+  Connects two networks without NAT
+  Used to link networks
+
+- Repeater Mode:
+  Extends Wi-Fi coverage
+  Rebroadcasts signal
+  Reduces speed
+
+--------------------------------------------------
+
+6. 802.11a vs 802.11b
+- Frequency:
+  802.11a → 5 GHz
+  802.11b → 2.4 GHz
+
+- Speed:
+  802.11a → up to 54 Mbps
+  802.11b → up to 11 Mbps
+
+- Range:
+  802.11a → Shorter
+  802.11b → Longer
+
+- Interference:
+  802.11a → Less
+  802.11b → More
+
+--------------------------------------------------
+
+7. 2.4 GHz vs 5 GHz Comparison
+
+Property        2.4 GHz            5 GHz
+--------------------------------------------
+Range           Longer             Shorter
+Speed           Lower              Higher
+Interference    High               Low
+Channels        Few                More
+Wall Penetration Better            Worse
+
+--------------------------------------------------
+
+8. IEEE vs WFA
+- IEEE:
+  Develops standards (802.11)
+
+- Wi-Fi Alliance (WFA):
+  Certifies devices
+  Defines Wi-Fi generations (Wi-Fi 4/5/6)
+
+--------------------------------------------------
+
+9. Wi-Fi Backhaul Types
+- Ethernet
+- Fiber
+- DSL/Cable
+- Wireless Mesh
+
+Example (Home):
+- Type: Fiber
+- Speed: 100 Mbps – 1 Gbps
+- Low latency
+- Reliable
+
+--------------------------------------------------
+
+10. Wi-Fi Topologies & Use Cases
+- Infrastructure Mode:
+  AP + clients (Home, Office)
+
+- Ad-hoc Mode:
+  Device-to-device (Temporary sharing)
+
+- Mesh Network:
+  Multiple nodes (Large coverage)
+
+- Point-to-Point:
+  Building-to-building link
+
+- Point-to-Multipoint:
+  One AP to many users (ISP networks)
+
+--------------------------------------------------

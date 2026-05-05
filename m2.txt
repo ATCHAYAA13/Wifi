@@ -1,0 +1,97 @@
+1. SplitMAC Architecture
+- SplitMAC divides MAC functions between AP and Controller
+- AP handles: Time-critical tasks (beacon, probe response, encryption)
+- Controller handles: Non-time-critical tasks (authentication, policy, management)
+- Improves performance by:
+  - Centralized management
+  - Reduced AP complexity
+  - Better scalability
+  - Faster roaming decisions
+
+--------------------------------------------------
+
+2. CAPWAP (Control And Provisioning of Wireless Access Points)
+- Protocol used between AP and Wireless LAN Controller (WLC)
+
+Flow:
+1. AP boots up
+2. Gets IP address (DHCP)
+3. Discovers WLC (DHCP option 43 / DNS / broadcast)
+4. Establishes CAPWAP tunnel
+5. Downloads configuration from WLC
+6. Starts serving clients
+
+--------------------------------------------------
+
+3. CAPWAP in OSI Model & Tunnels
+- Operates at Layer 7 (Application layer) using UDP
+
+Two tunnels:
+- Control Tunnel (UDP 5246):
+  Used for management, configuration, authentication
+
+- Data Tunnel (UDP 5247):
+  Used for client data traffic between AP and WLC
+
+--------------------------------------------------
+
+4. Lightweight AP vs Cloud-based AP
+- Lightweight AP:
+  Controlled by on-premise WLC
+  Needs controller in local network or WAN
+  Uses CAPWAP
+
+- Cloud-based AP:
+  Managed via cloud controller (Internet)
+  No on-prem WLC required
+  Easier remote management
+
+--------------------------------------------------
+
+5. CAPWAP Tunnel Maintenance
+- Uses keepalive (heartbeat) messages
+- AP and WLC exchange echo requests/replies
+- If no response, tunnel is considered down
+- AP tries to rejoin or discover new WLC
+
+--------------------------------------------------
+
+6. Sniffer Mode vs Monitor Mode
+- Sniffer Mode:
+  Captures and forwards packets to analyzer (e.g., Wireshark)
+  Used for packet-level troubleshooting
+
+- Monitor Mode:
+  Scans RF environment
+  Detects rogue APs, interference
+  Used for security and RF monitoring
+
+--------------------------------------------------
+
+7. WLC in WAN – Best AP Mode
+- FlexConnect mode (H-REAP) is best
+- Why:
+  - Local switching of traffic
+  - Only control traffic goes to WLC
+  - Works even if WAN is slow/unavailable
+
+--------------------------------------------------
+
+8. Challenges with Autonomous APs (>50)
+- No centralized management
+- Manual configuration on each AP
+- Difficult firmware upgrades
+- Poor scalability
+- No seamless roaming
+- Hard troubleshooting
+
+--------------------------------------------------
+
+9. If WLC Goes Down (Lightweight AP - Local Mode)
+- AP loses CAPWAP tunnel
+- Client data traffic stops (central switching fails)
+- New clients cannot connect
+- Existing clients may disconnect
+- AP tries to reconnect to WLC
+
+--------------------------------------------------
